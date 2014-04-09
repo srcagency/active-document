@@ -1,0 +1,30 @@
+{
+	"name": "active-document",
+	"version": "0.0.1",
+	"private": true,
+	"description": "",
+	"main": "index.js",
+	"keywords": [
+		"document",
+		"model",
+		"ORM",
+		"ODM"
+	],
+	"author": {
+		"name": "Thomas Jensen",
+		"email": "thomas@tjconcept.dk",
+		"url": "http://tjconcept.dk"
+	},
+	"license": "BSD-3-Clause",
+	"dependencies": {
+		"property-names": "~1.0.0",
+		"extend": "~1.2.1",
+		"ucfirst": "~0.0.1",
+		"camel-case": "~0.1.0",
+		"getter-or-setter-name": "~1.0.0",
+		"debug": "0.8.0"
+	},
+	"devDependencies": {
+		"tap": "~0.4.8"
+	}
+}
