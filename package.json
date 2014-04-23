@@ -10,19 +10,23 @@
 		"ORM",
 		"ODM"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/tjconcept/js-active-document.git"
+	},
 	"author": {
 		"name": "Thomas Jensen",
 		"email": "thomas@tjconcept.dk",
 		"url": "http://tjconcept.dk"
 	},
-	"license": "BSD-3-Clause",
+	"license": "MIT",
 	"dependencies": {
 		"property-names": "~1.0.0",
 		"extend": "~1.2.1",
 		"ucfirst": "~0.0.1",
 		"camel-case": "~0.1.0",
-		"getter-or-setter-name": "~1.0.0",
-		"debug": "0.8.0"
+		"getter-or-setter-name": "git+ssh://git@github.com:tjconcept/js-getter-or-setter-name.git",
+		"debug": "~0.8.0"
 	},
 	"devDependencies": {
 		"tap": "~0.4.8"
