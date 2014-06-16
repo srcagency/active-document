@@ -39,7 +39,7 @@ var activeDocument = module.exports = {
 
 	init: function( attributes ) {
 		if (debug.enabled)
-			debug('%s.init with attribute keys %j', this.constructor.name, attributes && Object.keys(attributes));
+			debug('%s.init with attribute keys %o', this.constructor.name, attributes && Object.keys(attributes));
 
 		this.attributes = attributes || {};
 	},
