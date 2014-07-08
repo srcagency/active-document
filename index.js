@@ -52,9 +52,9 @@ var toJSON = function( obj ) {
 	return obj.toJSON();
 };
 
-var fromJSON = function( json ) {
+var fromJSON = function( json, byReference ) {
 	debug('%s.fromJSON', this.name);
-	return new this(json);
+	return new this(byReference ? json : extend({}, json));
 };
 
 var addAttribute = function( attributeName ) {
