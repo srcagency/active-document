@@ -25,7 +25,7 @@
 		"extend": "~1.2.1",
 		"ucfirst": "~0.0.1",
 		"camel-case": "~0.1.0",
-		"getter-or-setter-name": "git+ssh://git@github.com:tjconcept/js-getter-or-setter-name.git",
+		"mutator-name": "^2.0.0",
 		"debug": "~1.0.2"
 	},
 	"devDependencies": {

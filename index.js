@@ -4,7 +4,7 @@ var getAllPropertyNames = require('property-names');
 var ucfirst = require('ucfirst');
 var camelCase = require('camel-case');
 var extend = require('extend');
-var getterOrSetterName = require('getter-or-setter-name');
+var mutator = require('mutator-name');
 var debug = require('debug')('active-document');
 
 var activeDocument = module.exports = {
@@ -32,7 +32,7 @@ var activeDocument = module.exports = {
 				if (typeof ctor.prototype[name] !== 'function' && name[0] !== '_')
 					ctor.addAttribute(name);
 
-				if (getterOrSetterName(name))
+				if (mutator(name))
 					ctor.addAttribute(camelCase(name.substr(3)));
 			});
 	},
