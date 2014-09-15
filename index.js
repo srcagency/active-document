@@ -14,7 +14,7 @@ var activeDocument = module.exports = {
 			attributeNames: [],
 			addAttribute: addAttribute,
 
-			toJSON: toJSON,
+			toJSON: ctor.toJSON || toJSON,
 			fromJSON: ctor.fromJSON || fromJSON,
 		});
 
