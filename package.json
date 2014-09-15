@@ -23,9 +23,7 @@
 	"dependencies": {
 		"property-names": "~1.0.0",
 		"extend": "~1.2.1",
-		"ucfirst": "~0.0.1",
-		"camel-case": "~0.1.0",
-		"mutator-name": "^2.0.0",
+		"mutator-name": "^2.0.1",
 		"debug": "~1.0.2"
 	},
 	"devDependencies": {

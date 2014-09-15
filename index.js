@@ -1,8 +1,6 @@
 'use strict';
 
 var getAllPropertyNames = require('property-names');
-var ucfirst = require('ucfirst');
-var camelCase = require('camel-case');
 var extend = require('extend');
 var mutator = require('mutator-name');
 var debug = require('debug')('active-document');
@@ -33,7 +31,7 @@ var activeDocument = module.exports = {
 					ctor.addAttribute(name);
 
 				if (mutator(name))
-					ctor.addAttribute(camelCase(name.substr(3)));
+					ctor.addAttribute(mutator.nameFrom(name));
 			});
 	},
 
