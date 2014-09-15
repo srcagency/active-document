@@ -1,32 +1,34 @@
 {
 	"name": "active-document",
-	"version": "0.0.1",
-	"private": true,
-	"description": "",
-	"main": "index.js",
+	"version": "0.1.0",
+	"description": "Decorate a constructor to have attributes behind mutators",
+	"main": "src/index.js",
 	"keywords": [
 		"document",
 		"model",
-		"ORM",
-		"ODM"
+		"attributes",
+		"mutators"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://bitbucket.org/src-agency/js-active-document.git"
+		"url": "https://github.com/srcagency/active-document.git"
+	},
+	"scripts": {
+		"test": "node test"
 	},
 	"author": {
 		"name": "Thomas Jensen",
-		"email": "thomas@tjconcept.dk",
-		"url": "http://tjconcept.dk"
+		"email": "thomas@src.agency",
+		"url": "http://src.agency"
 	},
 	"license": "MIT",
 	"dependencies": {
 		"property-names": "~1.0.0",
 		"extend": "~1.2.1",
 		"mutator-name": "^2.0.1",
-		"debug": "~1.0.2"
+		"debug": "^2.0.0"
 	},
 	"devDependencies": {
-		"tap": "~0.4.8"
+		"tape": "^2.14.0"
 	}
 }
