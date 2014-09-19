@@ -24,7 +24,7 @@ var activeDocument = module.exports = {
 			});
 
 		extend(ctor.prototype, {
-			toJSON: selfToJSON,
+			toJSON: ctor.prototype.toJSON || selfToJSON,
 		});
 	},
 
