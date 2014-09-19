@@ -54,7 +54,7 @@ function toJSON( obj ){
 }
 
 function selfToJSON(){
-	return extend(true, {}, this.attributes);
+	return extend({}, this.attributes);
 }
 
 function addAttribute( attr ){
