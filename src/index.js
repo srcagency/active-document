@@ -43,7 +43,7 @@ var attributesConfig = {
 };
 
 function fromJSON( json ){
-	debug('%s.fromJSON %j', this.name, json);
+	debug('%s.fromJSON %o', this.name, json);
 
 	attributesConfig.attributes.value = json;
 	return Object.create(this.prototype, attributesConfig);
