@@ -32,6 +32,8 @@ var activeDocument = module.exports = {
 		attributesConfig.attributes.value = attributes || {};
 		Object.defineProperty(this, 'attributes', attributesConfig.attributes);
 	},
+
+	fromJSON: fromJSON,
 };
 
 var attributesConfig = {
