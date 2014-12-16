@@ -11,7 +11,7 @@ test(function( t ){
 		activeDocument.init.apply(this);
 
 		this.born = year;
-	};
+	}
 
 	extend(Person.prototype, {
 		firstName: null,
