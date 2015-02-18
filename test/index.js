@@ -65,7 +65,9 @@ test(function( t ){
 
 	t.deepEqual(dude.toJSON(), { bff: dude.bff, lastName: 'Smith' });
 
-	t.equal(JSON.stringify(dude.toJSON()), '{"lastName":"Smith","bff":{"born":2014,"firstName":"Jacob"}}');
+	t.equal(JSON.stringify(dude.toJSON()), '{"lastName":"Smith","bff":{"born":'
+		+ year
+		+ ',"firstName":"Jacob"}}');
 
 	t.end();
 });
