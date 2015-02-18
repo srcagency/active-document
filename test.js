@@ -1,6 +1,6 @@
 'use strict';
 
-var activeDocument = require('../');
+var activeDocument = require('./');
 var test = require('tape');
 var assign = require('object-assign');
 
