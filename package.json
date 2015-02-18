@@ -13,7 +13,7 @@
 		"url": "https://github.com/srcagency/active-document.git"
 	},
 	"testling": {
-		"files": "test",
+		"files": "test.js",
 		"browsers": [
 			"ie/6..latest",
 			"chrome/22..latest",
