@@ -1,6 +1,6 @@
 {
 	"name": "active-document",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Decorate a constructor to have attributes behind mutators",
 	"keywords": [
 		"document",
