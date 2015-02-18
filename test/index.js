@@ -2,7 +2,7 @@
 
 var activeDocument = require('../');
 var test = require('tape');
-var extend = require('extend');
+var assign = require('object-assign');
 
 test(function( t ){
 	var year = (new Date()).getFullYear();
@@ -13,7 +13,7 @@ test(function( t ){
 		this.born = year;
 	}
 
-	extend(Person.prototype, {
+	assign(Person.prototype, {
 		firstName: null,
 		lastName: null,
 		born: null,

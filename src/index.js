@@ -1,7 +1,7 @@
 'use strict';
 
 var getAllPropertyNames = require('property-names');
-var extend = require('extend');
+var assign = require('object-assign');
 var mutator = require('mutator-name');
 var debug = require('debug')('active-document');
 
@@ -9,7 +9,7 @@ var activeDocument = module.exports = {
 	decorate: function( ctor ){
 		debug('%s.decorate', ctor.name);
 
-		extend(ctor, {
+		assign(ctor, {
 			attributeNames: [],
 			addAttribute: addAttribute,
 
@@ -23,7 +23,7 @@ var activeDocument = module.exports = {
 					ctor.addAttribute(mutator.nameFrom(attr) || attr);
 			});
 
-		extend(ctor.prototype, {
+		assign(ctor.prototype, {
 			toJSON: ctor.prototype.toJSON || selfToJSON,
 		});
 	},
@@ -56,7 +56,7 @@ function toJSON( obj ){
 }
 
 function selfToJSON(){
-	return extend({}, this.attributes);
+	return assign({}, this.attributes);
 }
 
 function addAttribute( attr ){

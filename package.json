@@ -24,7 +24,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"property-names": "~1.0.0",
-		"extend": "~1.2.1",
+		"object-assign": "^2.0.0",
 		"mutator-name": "^2.0.1",
 		"debug": "^2.0.0"
 	},
