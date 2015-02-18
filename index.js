@@ -28,9 +28,9 @@ var activeDocument = module.exports = {
 		});
 	},
 
-	init: function( attributes ){
+	init: function( m, attributes ){
 		attributesConfig.attributes.value = attributes || {};
-		Object.defineProperty(this, 'attributes', attributesConfig.attributes);
+		Object.defineProperty(m, 'attributes', attributesConfig.attributes);
 	},
 
 	fromJSON: fromJSON,

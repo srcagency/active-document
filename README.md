@@ -18,13 +18,13 @@ npm install active-document
 ## Use
 
 ```js
-var activeDocument = require('active-document');
+var aDoc = require('active-document');
 
 function Car(){
-	activeDocument.init.apply(this);
+	aDoc.init(this);
 }
 
-activeDocument.decorate(Car);
+aDoc.decorate(Car);
 ```
 
 The `decorate` function is simply a mixin. It copies functions to the
@@ -73,7 +73,7 @@ In the car example these would be accessed as `Car.<name>` (e.g.
 ```js
 function Person(){
 	// creates empty attributes container
-	activeDocument.init.apply(this);
+	aDoc.init(this);
 
 	// set some defaults
 	this.born = (new Date()).getFullYear();
@@ -94,7 +94,7 @@ Object.assign(Person.prototype, {
 	},
 });
 
-activeDocument.decorate(Person);
+aDoc.decorate(Person);
 
 Person.attributeNames; // [ 'firstName', 'lastName', 'born', 'name' ]
 

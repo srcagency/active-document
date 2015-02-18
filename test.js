@@ -8,7 +8,7 @@ test(function( t ){
 	var year = (new Date()).getFullYear();
 
 	function Person(){
-		activeDocument.init.apply(this);
+		activeDocument.init(this);
 
 		this.born = year;
 	}
