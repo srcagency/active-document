@@ -1,8 +1,13 @@
 # Active Document
 
-I encourage any user to read the source code.
+I encourage to read the source code as it is shorter and more precise than the
+documentation.
 
-Define attributes by adding properties (not prefixed with `_`) or methods (prefixed with `get` or `set`) to the prototype.
+Adds getter and setter methods to an object based on existing properties or
+methods in their prototype.
+
+Define attributes by adding properties (not prefixed with `_`) or methods
+(prefixed with `get` or `set`) to the prototype before calling `decorate`.
 
 ## Install
 
@@ -22,21 +27,46 @@ function Car(){
 activeDocument.decorate(Car);
 ```
 
-### Constructor methods (static functions)
-- `attributeNames` a list of defined attributes
-- `addAttribute(name)` add attribute manually
-- `toJSON` calls prototype `toJSON`
+The `decorate` function is simply a mixin. It copies functions to the
+constructor and the prototype of the given object. This is known as
+*concatenative inheritance*.
+
+### Statics
+
+In the car example these would be accessed as `Car.<name>` (e.g.
+`Car.attributeNames`).
+
+- `attributeNames`
+
+	A list (`Array`) of defined attributes
+
+- `addAttribute(name)`
+
+	Add an attribute manually
+
+- `toJSON(document)`
+
+	Delegates to `document.toJSON()` (convenient for `.map` etc.)
+
 - `fromJSON(json)` 
 	
-	Creates an object having `json` as its `attributes` *does not invoke* constructor
-	Use this for bootstrapping from a trusted external source such as a database
+	Creates an object having `json` as its `attributes`.
+
+	**Does not invoke constructor**.
+
+	Use this for bootstrapping from a trusted external source such as a
+	database or a web service.
 
 ### Methods (added to the prototype)
+
 - `toJSON`
 
-	Returns a copy of `obj.attributes`
-	Overwrite (define on the prototype) to customize format
-	Use this for shipping of to an external source such as a database
+	Returns a copy of `obj.attributes`.
+
+	Overwrite (define on the prototype) to customize format.
+
+	Use this for shipping of to an external source such as a database or a web
+	service.
 
 ### Elaborate example
 
@@ -47,9 +77,9 @@ function Person(){
 
 	// set some defaults
 	this.born = (new Date()).getFullYear();
-};
+}
 
-extend(Person.prototype, {
+Object.assign(Person.prototype, {
 	firstName: null,
 	lastName: null,
 	born: null,
@@ -66,7 +96,7 @@ extend(Person.prototype, {
 
 activeDocument.decorate(Person);
 
-Person.attributeNames // [ 'firstName', 'lastName', 'born', 'name' ]
+Person.attributeNames; // [ 'firstName', 'lastName', 'born', 'name' ]
 
 var child = new Person();
 
