@@ -26,9 +26,9 @@
 		"property-names": "~1.0.0",
 		"object-assign": "^2.0.0",
 		"mutator-name": "^2.0.1",
-		"debug": "^2.0.0"
+		"debug": "^2.1.1"
 	},
 	"devDependencies": {
-		"tape": "^2.14.0"
+		"tape": "^3.5.0"
 	}
 }
