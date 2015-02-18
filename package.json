@@ -13,8 +13,23 @@
 		"type": "git",
 		"url": "https://github.com/srcagency/active-document.git"
 	},
+	"testling": {
+		"files": "test",
+		"browsers": [
+			"ie/6..latest",
+			"chrome/22..latest",
+			"firefox/16..latest",
+			"safari/latest",
+			"opera/11.0..latest",
+			"iphone/6",
+			"ipad/6",
+			"android-browser/latest"
+		]
+	},
 	"scripts": {
-		"test": "node test"
+		"test": "npm run test:node & npm run test:browser",
+		"test:node": "node test",
+		"test:browser": "testling"
 	},
 	"author": {
 		"name": "Thomas Jensen",
@@ -29,6 +44,7 @@
 		"debug": "^2.1.1"
 	},
 	"devDependencies": {
-		"tape": "^3.5.0"
+		"tape": "^3.5.0",
+		"testling": "^1.7.1"
 	}
 }
